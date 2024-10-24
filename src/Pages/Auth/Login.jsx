@@ -17,7 +17,9 @@ export default function Login() {
 
   async function handleSubmit(e) {
     setLoading(true);
+
     e.preventDefault();
+
     const res = await fetch("/api/login", {
       method: "POST",
       body: JSON.stringify(formData),
@@ -37,7 +39,6 @@ export default function Login() {
       setLoading(false);
       navigate("/");
     }
-    console.log(data);
   }
 
   return (

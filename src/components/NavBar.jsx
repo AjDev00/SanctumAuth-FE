@@ -40,6 +40,9 @@ export default function NavBar() {
               <Link to="/profile" className="">
                 {user.name}
               </Link>
+              <Link to="/create-posts" className="hover:cursor-pointer">
+                New Post
+              </Link>
               <form onSubmit={handleSubmit}>
                 <button className="hover:cursor-pointer">Logout</button>
               </form>
